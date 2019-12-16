@@ -1,0 +1,20 @@
+如何创建一个github仓库
+1.首先在本地安装github，然后创建一个空目录或者利用现有的目录
+git init #执行过户目录内会产生一个.git文件表明成功了
+2.添加文件命令为，假设有一个1.txt文件
+git add 1.txt
+git commit -m “add  a new file”
+操作后表示本地提交成功了
+3.可以通过git status命令查看当前git的状态是否有文件待提交
+4.关联远程仓库，在github.com上新建一个repository
+在电脑本地执行
+ssh-keygen -t rsa -C "xinli_2014@163.com"
+生成id_rsa和id_rsa.pub两个文件，将id_rsa.pub内的内容粘贴到github.com上account内的ssh key内
+git remote add origin https://github.com/lixin1010/python.git
+执行上面的命令关联远程仓库，第一次需要输入github账号和密码，以后不需要
+git push -u origin master #第一次连接需要加-u参数，之后不需要添加-u
+
+执行完以上的步骤后以后提交变动的操作步骤仅需如下步骤：
+git add 1.txt
+git commit -m “add  a new file”
+git push  origin master
