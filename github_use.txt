@@ -10,7 +10,7 @@ git commit -m “add  a new file”
 在电脑本地执行
 ssh-keygen -t rsa -C "xinli_2014@163.com"
 生成id_rsa和id_rsa.pub两个文件，将id_rsa.pub内的内容粘贴到github.com上account内的ssh key内
-git remote add origin https://github.com/lixin1010/python.git
+git remote add origin https://github.com/lixin1010/python
 执行上面的命令关联远程仓库，第一次需要输入github账号和密码，以后不需要
 git push -u origin master #第一次连接需要加-u参数，之后不需要添加-u
 
